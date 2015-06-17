@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block body %}
+  {% if session.logged_in %}
+    This is a list of files uploaded by user.
+    <ul class=files>
+  {% for file in files %}
+
+    {{ file }}
+ 
+  {% else %}
+    <em>No files yet.</em>
+  {% endfor %}
+
+  {% endif %}
+  </ul>
+{% endblock %}
